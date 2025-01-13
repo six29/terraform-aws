@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
+  name        = "terraform_aws_gh_actions_allow_ssh_sg"
   description = "Allow SSH inbound traffic"
   vpc_id      = "vpc-04665586b4510c781" # singapore main vpc
 
@@ -19,7 +19,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "terraform_aws_gh_actions_allow_ssh_sg_tag"
   }
 }
 
