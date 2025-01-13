@@ -10,7 +10,7 @@ on:
 
 env:
   AWS_REGION: "ap-southeast-1" 
-  TERRAFORM_EC2_WORKING_DIR: "./ec2"
+  TERRAFORM_EC2_WORKING_DIR: "ec2"
    
 permissions:
   contents: read
