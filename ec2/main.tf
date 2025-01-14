@@ -23,19 +23,19 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-resource "aws_instance" "web_server" {
-  ami           = "ami-0e48a8a6b7dc1d30b" # Amazon Linux 2023 singapore
-  instance_type = "t2.micro"
+# resource "aws_instance" "web_server" {
+#   ami           = "ami-0e48a8a6b7dc1d30b" # Amazon Linux 2023 singapore
+#   instance_type = "t2.micro"
 
-  subnet_id                   = "subnet-03ad19ec08051cf51" # Az a
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
-  associate_public_ip_address = true
+#   subnet_id                   = "subnet-03ad19ec08051cf51" # Az a
+#   vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+#   associate_public_ip_address = true
 
-  tags = {
-    Name = "Test"
-  }
-}
+#   tags = {
+#     Name = "Test"
+#   }
+# }
 
-output "public_ip" {
-  value = aws_instance.web_server.public_ip
-}
+# output "public_ip" {
+#   value = aws_instance.web_server.public_ip
+# }
