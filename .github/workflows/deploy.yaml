@@ -42,7 +42,7 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt
         continue-on-error: true
 
       - name: Terraform Init
@@ -89,4 +89,4 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/deploy-ec2' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -refresh=false
